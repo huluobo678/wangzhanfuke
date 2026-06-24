@@ -35,7 +35,8 @@ section, header, footer, nav, div, dl, dd, dt, ul, li, article, aside { max-widt
 .yz, .pro, .yy, .news, .abt { padding: 56px 0; height: auto; }
 .yz_con { padding: 0; }
 .yz dl, .pro_con { display: flex; gap: 34px; align-items: stretch; }
-.yz_l, .pro_l { flex: 0 0 310px; }
+.yz_l { flex: 0 0 310px; }
+.pro_l { flex: 0 0 280px; align-self: flex-start; }
 .yz dt, .pro_r { flex: 1; min-width: 0; }
 .yz dd, .yz_con dt { float: none; width: auto; }
 .yz_l h3 { font-size: 30px; margin: 0 0 20px; }
@@ -45,11 +46,40 @@ section, header, footer, nav, div, dl, dd, dt, ul, li, article, aside { max-widt
 .yz_l b { display: block; font-size: 18px; }
 .yz_l i { color: #777; font-style: normal; }
 .pro { background: #f6f6f6; }
-.pro_l { background: #d71920; color: #fff; padding: 28px; height: auto; }
-.pro_l h3 span { display: block; font-size: 28px; }
-.pro_l h3 i { font-style: normal; opacity: .75; }
-.pro_l ul { margin: 24px 0 0; padding: 0; list-style: none; }
-.pro_l li a { display: block; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.25); font-size: 18px; }
+.pro_l {
+  background: #d71920;
+  color: #fff;
+  padding: 30px 24px;
+  height: auto;
+  min-height: 0;
+  border-radius: 2px;
+  box-shadow: 0 14px 34px rgba(215,25,32,.18);
+}
+.pro_l h3 { height: auto; margin: 0; padding: 0 0 22px; text-align: center; border-bottom: 1px solid rgba(255,255,255,.18); }
+.pro_l h3 span { display: block; font-size: 28px; line-height: 1.25; }
+.pro_l h3 i { display: block; margin-top: 6px; font-size: 12px; line-height: 1; font-style: normal; letter-spacing: 1px; opacity: .75; }
+.pro_l ul { display: grid; gap: 12px; margin: 22px 0 0; padding: 0; list-style: none; }
+.pro_l li b { display: block; }
+.pro_l li a,
+.pro_l li b a {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 18px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-left: 5px solid #ff9d00;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+.pro_l li a:hover,
+.pro_l li b a:hover { transform: translateX(3px); }
+.pro_l li a i,
+.pro_l li b a i { display: none; }
 .pro_r { width: auto; height: auto; }
 .pro_r dl { display: flex; align-items: center; background: #fff; margin: 0 0 24px; position: static; }
 .pro_r dl dt { width: 38%; }
@@ -155,10 +185,10 @@ section, header, footer, nav, div, dl, dd, dt, ul, li, article, aside { max-widt
   .yz_l i { display: block; font-size: 12px; line-height: 1.35; white-space: normal; }
   .tit span { font-size: 26px; }
   .tit i { font-size: 14px; line-height: 1.5; }
-  .pro_l { margin-bottom: 18px; padding: 22px; min-height: 0; height: auto !important; background-image: none; }
-  .pro_l h3 { text-align: center; margin: 0 0 16px; height: auto; padding-top: 0; }
-  .pro_l ul { margin-top: 12px; background: #fff; border-radius: 6px; overflow: hidden; }
-  .pro_l li a { color: var(--blue); border-bottom: 1px solid #eee; padding: 13px 18px; }
+  .pro_l { margin-bottom: 18px; padding: 24px 22px; min-height: 0; height: auto !important; background-image: none; }
+  .pro_l h3 { text-align: center; margin: 0; height: auto; padding: 0 0 18px; }
+  .pro_l ul { margin-top: 18px; background: transparent; border-radius: 0; overflow: visible; }
+  .pro_l li a, .pro_l li b a { color: var(--blue); border-bottom: 0; padding: 0 18px; }
   .pro_r dl dt { width: 100%; }
   .pro_r dl dd { padding: 18px; }
   .pro_r { padding: 16px; min-height: 0; height: auto !important; }
@@ -194,9 +224,9 @@ section, header, footer, nav, div, dl, dd, dt, ul, li, article, aside { max-widt
   .yz_l b { font-size: 17px; line-height: 1.35; word-break: keep-all; }
   .yz_l i { font-size: 13px; line-height: 1.5; }
   .yz dt img { width: 100%; }
-  .pro_l { padding: 24px 20px; }
-  .pro_l li b a, .pro_l li a { height: auto; min-height: 44px; line-height: 1.4; display: flex; align-items: center; padding: 12px 18px; white-space: normal; }
-  .pro_l ul { border-radius: 6px; }
+  .pro_l { padding: 24px 18px; }
+  .pro_l li b a, .pro_l li a { height: auto; min-height: 48px; line-height: 1.4; display: flex; align-items: center; padding: 10px 16px; white-space: normal; }
+  .pro_l ul { border-radius: 0; }
   .pro_r dl { margin-bottom: 16px; }
   .pro_r dl dd { padding: 14px 0 0; }
   .pro_r ul, .yy_con, .news_con, .product-grid, .param-grid, .advantage ul, .p14-product-2-list { grid-template-columns: 1fr; }
