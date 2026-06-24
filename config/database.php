@@ -1,7 +1,7 @@
 <?php
 /**
  * 主数据库连接参数，未配置的参数使用框架惯性配置
- * 如果修改为mysql数据库，请同时修改type和dbname两个参数
+ * 如果修改为 mysql 数据库，请同时修改 type 和 dbname 两个参数
  */
 return array(
 
@@ -17,9 +17,9 @@ return array(
 
         'port' => '3306', // 数据库端口
 
-        //'dbname' => 'pbootcms' // 去掉注释，启用mysql数据库，注意修改前面的连接信息及type为mysqli
+        //'dbname' => 'pbootcms' // 去掉注释，启用 mysql 数据库，注意修改前面的连接信息及 type 为 mysqli
 
-        'dbname' => '/data/pbootcms.db' // 去掉注释，启用Sqlite数据库，注意修改type为sqlite
+        'dbname' => '/data/pbootcms.db' // 去掉注释，启用 SQLite 数据库，注意修改 type 为 sqlite
     )
 
 );
