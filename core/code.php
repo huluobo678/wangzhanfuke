@@ -24,9 +24,9 @@ session_start(); // 启动会话
                  
 // 初始化验证码
 $code = new Code();
-$code->height = 45;
-$code->width = 120;
-$code->fontsize = 18;
-$code->charset = 'abcdefghkmnprtuvwxy23456789ABCDEFGHKMNPRTUVWXY';
+$code->height = 46;
+$code->width = 150;
+$code->fontsize = 24;
+$code->charset = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 $code->doimg();
 session('checkcode', $code->getCode());

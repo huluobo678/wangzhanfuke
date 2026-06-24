@@ -58,7 +58,7 @@ class Code
     private function createBg()
     {
         $this->img = imagecreatetruecolor($this->width, $this->height);
-        $color = imagecolorallocate($this->img, mt_rand(200, 255), mt_rand(200, 255), mt_rand(200, 255));
+        $color = imagecolorallocate($this->img, 248, 250, 252);
         imagefilledrectangle($this->img, 0, $this->height, $this->width, 0, $color);
     }
 
@@ -67,21 +67,26 @@ class Code
     {
         $_x = ($this->width - 10) / $this->codelen;
         for ($i = 0; $i < $this->codelen; $i ++) {
-            $this->fontcolor = imagecolorallocate($this->img, mt_rand(0, 100), mt_rand(0, 100), mt_rand(0, 100));
-            imagettftext($this->img, $this->fontsize, mt_rand(- 20, 20), $_x * $i + $_x / 3, $this->height / 1.4, $this->fontcolor, $this->font, $this->code[$i]);
+            $this->fontcolor = imagecolorallocate($this->img, mt_rand(20, 70), mt_rand(40, 90), mt_rand(70, 130));
+            $x = (int) ($_x * $i + 12);
+            $y = (int) (($this->height - imagefontheight(5)) / 2);
+            if (function_exists('imagettftext') && is_file($this->font)) {
+                $result = @imagettftext($this->img, $this->fontsize, mt_rand(- 8, 8), $x, $this->height / 1.35, $this->fontcolor, $this->font, $this->code[$i]);
+                if ($result !== false) {
+                    continue;
+                }
+            }
+            imagestring($this->img, 5, $x, $y, $this->code[$i], $this->fontcolor);
+            imagestring($this->img, 5, $x + 1, $y, $this->code[$i], $this->fontcolor);
         }
     }
 
     // 生成线条、雪花
     private function createLine()
     {
-        for ($i = 0; $i < 6; $i ++) {
-            $color = imagecolorallocate($this->img, mt_rand(100, 200), mt_rand(100, 200), mt_rand(100, 200));
-            imageline($this->img, mt_rand(0, $this->width), mt_rand(0, $this->height), mt_rand(0, $this->width), mt_rand(0, $this->height), $color);
-        }
-        for ($i = 0; $i < 100; $i ++) {
-            $color = imagecolorallocate($this->img, mt_rand(200, 255), mt_rand(200, 255), mt_rand(200, 255));
-            imagestring($this->img, mt_rand(1, 5), mt_rand(0, $this->width), mt_rand(0, $this->height), '*', $color);
+        for ($i = 0; $i < 8; $i ++) {
+            $color = imagecolorallocate($this->img, mt_rand(215, 240), mt_rand(225, 245), mt_rand(235, 250));
+            imagesetpixel($this->img, mt_rand(0, $this->width), mt_rand(0, $this->height), $color);
         }
     }
 
