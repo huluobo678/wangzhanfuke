@@ -1,0 +1,23 @@
+{include file=comm/head.html}
+<section class="ty-banner-1"><img src="{sort:pic}" alt="{sort:name}"></section>
+<main class="list-page contenttb">
+  <div class="p101-curmbs-1"><b>当前位置：</b><a href="{pboot:sitepath}/">首页</a><span> &gt; </span><span>{sort:name}</span></div>
+  <div class="category-tabs">
+    {pboot:nav parent=5 num=3}
+    <a href="[nav:link]" class="{pboot:if('[nav:scode]'=='{sort:scode}')}active{/pboot:if}">[nav:name]</a>
+    {/pboot:nav}
+  </div>
+  <div class="product-grid">
+    {pboot:list num=12 order=sorting page=1}
+    <article class="product-card">
+      <a href="[list:link]">
+        <span class="pic"><img src="[list:ico]" alt="[list:title]"></span>
+        <h3>[list:title]</h3>
+        <p>[list:description lencn=56]</p>
+      </a>
+    </article>
+    {/pboot:list}
+  </div>
+  {include file=comm/page.html}
+</main>
+{include file=comm/foot.html}

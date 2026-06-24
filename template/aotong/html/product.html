@@ -1,0 +1,64 @@
+{include file=comm/head.html}
+<section class="ty-banner-1"><img src="{sort:pic}" alt="{sort:name}"></section>
+<main class="detail-page">
+  <div class="contenttb crumb"><a href="{pboot:sitepath}/">首页</a><span> &gt; </span><a href="{sort:link}">{sort:name}</a><span> &gt; </span><span>{content:title}</span></div>
+  <div class="blk-main">
+    <section class="blk-sm prod-showcase-1">
+      <div class="t1-pro-preview">
+        <div class="t1-spec-preview"><img class="main-product-img" src="{content:ico}" alt="{content:title}"></div>
+        <div class="t1-spec-scroll">
+          <div class="t1-items">
+            <p class="t1-current"><img src="{content:ico}" alt="{content:title}"></p>
+            {pboot:pics num=6 id={content:id}}<p><img src="[pics:src]" alt="[pics:title]"></p>{/pboot:pics}
+          </div>
+        </div>
+      </div>
+      <div class="p1-pro-showcase-1-txt">
+        <h1 class="p1-pro-showcase-1-txt-title">{content:title}</h1>
+        <div class="p1-pro-showcase-1-txt-t1">
+          <p>{content:description}</p>
+          <p>产品类型：{content:ext_type}</p>
+          <p>应用场景：地铁、学校、医院、商超、高层建筑、工业厂房及市政工程等。</p>
+        </div>
+        <div class="p102-proShow-1-tel">
+          <a href="tel:{pboot:companyphone}">在线咨询</a>
+          <p><em>服务热线：</em><span>{pboot:companyphone}</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="p14-prodcontent-1 blk fixed-detail">
+      <div class="detail-tabs"><span class="active">产品详情</span><span>产品参数</span><span>厂家优势</span></div>
+      <div class="backend-content">{content:content}</div>
+      <div class="fixed-section">
+        <h2>产品参数</h2>
+        <p>低烟无卤阻燃型交联聚乙烯绝缘聚烯烃护套电力电缆，具备优良导电性能、环保低烟、安全稳定等特点，可按客户应用场景和参数要求定制生产。</p>
+        <div class="param-grid">
+          <dl><dt>执行标准</dt><dd>国家标准/行业标准</dd></dl>
+          <dl><dt>额定电压</dt><dd>0.6/1KV、8.7/15KV、26/35KV等</dd></dl>
+          <dl><dt>导体材料</dt><dd>无氧铜、铝合金等</dd></dl>
+          <dl><dt>适用场景</dt><dd>电力工程、建筑工程、市政工程、新能源项目</dd></dl>
+        </div>
+      </div>
+      <div class="fixed-section advantage">
+        <h2>奥通线缆厂家优势</h2>
+        <ul>
+          <li><b>国标品质</b><span>严选原材料，质检工序层层把关。</span></li>
+          <li><b>品类齐全</b><span>低压电缆、高压电缆、电线三大分类可切换管理。</span></li>
+          <li><b>现货供应</b><span>常规型号库存充足，支持快速交付。</span></li>
+          <li><b>按需定制</b><span>根据工程参数、应用环境与交付周期定制方案。</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="p14-product-2 blk">
+      <h3><b>热品推荐</b><span>/ Hot product</span></h3>
+      <div class="p14-product-2-list">
+        {pboot:list scode=5 num=4 order=sorting}
+        <dl><dt><a href="[list:link]"><img src="[list:ico]" alt="[list:title]"></a></dt><dd><h4><a href="[list:link]">[list:title]</a></h4></dd></dl>
+        {/pboot:list}
+      </div>
+    </section>
+  </div>
+</main>
+{include file=comm/foot.html}

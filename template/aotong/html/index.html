@@ -1,0 +1,88 @@
+{include file=comm/head.html}
+
+<section class="banner">
+  <div class="bd">
+    <ul>
+      {pboot:slide gid=1 num=3}
+      <li><a href="[slide:link]"><img src="[slide:src]" alt="[slide:title]"></a></li>
+      {/pboot:slide}
+    </ul>
+  </div>
+</section>
+
+<section class="yz">
+  <div class="yz_con">
+    <div class="content01">
+      <dl class="clearfix">
+        <dd class="yz_l">
+          <h3><a href="{pboot:sort scode=1}[sort:link]{/pboot:sort}">奥通线缆 <b>通连万千工程</b></a></h3>
+          <div class="desc">奥通线缆有限公司是集低压电缆、高压电缆、电线研发、生产、销售及技术服务为一体的高新技术企业，产品适配建筑工程、工业生产、城市电网建设等多领域电力传输需求。</div>
+          <ul>
+            <li><p><b>央国企合格供应商</b><i>陕建、中建、国家电网等</i></p></li>
+            <li><p><b>CCC/TUV认证</b><i>符合国家标准的电线电缆</i></p></li>
+            <li><p><b>现货秒发</b><i>规模化运输、快速直达</i></p></li>
+          </ul>
+        </dd>
+        <dt><img src="{pboot:sitepath}/static/aotong/images/yz.jpg" alt=""></dt>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="pro">
+  <div class="content01">
+    <h2 class="tit"><a href="{pboot:sort scode=5}[sort:link]{/pboot:sort}"><span>奥通线缆<b>产品系列</b></span><i>生产符合国家标准的电缆产品</i></a></h2>
+    <div class="pro_con">
+      <aside class="pro_l">
+        <h3><a href="{pboot:sort scode=5}[sort:link]{/pboot:sort}"><span>奥通线缆</span><i>aotongxianlan</i></a></h3>
+        <ul>
+          {pboot:nav parent=5 num=3}
+          <li><b><a href="[nav:link]">[nav:name]<i>/ </i></a></b></li>
+          {/pboot:nav}
+        </ul>
+      </aside>
+      <div class="pro_r">
+        <dl>
+          <dt class="pic"><img src="{pboot:sitepath}/static/aotong/images/pro_t.jpg" alt=""></dt>
+          <dd><h4>24小时客服在线</h4><p>即时响应咨询、实时处理需求<br>电线电缆现货供应，支持按需定制</p><a class="more" href="tel:{pboot:companyphone}">我要咨询</a></dd>
+        </dl>
+        <ul>
+          {pboot:list scode=5 num=8 order=sorting}
+          <li><a href="[list:link]" title="[list:title]"><i class="pic"><img src="[list:ico]" alt="[list:title]"></i><span>[list:title]</span></a></li>
+          {/pboot:list}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="yy">
+  <h2 class="tit"><span>产品<b>应用领域</b></span><i>为各领域提供定制化布线解决方案</i></h2>
+  <div class="yy_con">
+    <dl><dt class="pic"><img src="{pboot:sitepath}/static/aotong/images/yy1.jpg" alt=""></dt><dd><h4>电力工程</h4><p>适配发电、输电网络全场景。</p></dd></dl>
+    <dl><dt class="pic"><img src="{pboot:sitepath}/static/aotong/images/yy2.jpg" alt=""></dt><dd><h4>建筑工程</h4><p>覆盖楼宇配电、消防电路等需求。</p></dd></dl>
+    <dl><dt class="pic"><img src="{pboot:sitepath}/static/aotong/images/yy3.jpg" alt=""></dt><dd><h4>交通建设</h4><p>适用于轨道交通、公路照明等场景。</p></dd></dl>
+    <dl><dt class="pic"><img src="{pboot:sitepath}/static/aotong/images/yy4.jpg" alt=""></dt><dd><h4>新能源项目</h4><p>匹配光伏电站、风电场等设备。</p></dd></dl>
+    <dl><dt class="pic"><img src="{pboot:sitepath}/static/aotong/images/yy5.jpg" alt=""></dt><dd><h4>市政工程</h4><p>服务城市电网、智慧路灯等设施。</p></dd></dl>
+  </div>
+</section>
+
+<section class="news">
+  <div class="content01">
+    <h2 class="tit"><span>资讯<b>动态</b></span><i>分享电线电缆产品知识</i></h2>
+    <div class="news_con">
+      {pboot:list scode=2 num=4 order=date}
+      <article><a href="[list:link]"><h4>[list:title]</h4><p>[list:description lencn=80]</p></a></article>
+      {/pboot:list}
+    </div>
+  </div>
+</section>
+
+<section class="abt">
+  <div class="content01">
+    <h2 class="tit"><span><b>走进</b>奥通</span></h2>
+    <p>公司始终专注于电线电缆领域的创新与发展，引进先进生产管理经验，构建布局合理、配套完善的生产体系。</p>
+  </div>
+</section>
+
+{include file=comm/foot.html}

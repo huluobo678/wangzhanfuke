@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+  <title>{pboot:pagetitle}</title>
+  <meta name="keywords" content="{pboot:pagekeywords}">
+  <meta name="description" content="{pboot:pagedescription}">
+  <link rel="stylesheet" href="{pboot:sitepath}/static/aotong/css/index.css">
+  <link rel="stylesheet" href="{pboot:sitetplpath}/css/aotong.css">
+  <script src="{pboot:sitepath}/static/aotong/js/JQuery.js"></script>
+</head>
+<body>
+<header class="site-head" id="head">
+  <div class="head-main content01">
+    <h1 class="logo">
+      <a href="{pboot:sitepath}/" title="{pboot:sitetitle}">
+        <img src="{pboot:sitelogo}" alt="{pboot:sitetitle}">
+      </a>
+    </h1>
+    <h2 class="head-slogan"><span>源头电力电缆生产厂家</span><i>专注工程电缆制造</i></h2>
+    <div class="head-tel">
+      <p><span>咨询热线：</span><b>{pboot:companyphone}</b></p>
+      <em>国标品质 品类齐全 交货快捷</em>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="打开导航"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="nav menu">
+    <div class="content01">
+      <ul>
+        <li><a href="{pboot:sitepath}/">首页</a></li>
+        {pboot:nav num=9 parent=0}
+        <li><a href="[nav:link]" title="[nav:name]">[nav:name]</a></li>
+        {/pboot:nav}
+      </ul>
+    </div>
+  </nav>
+</header>

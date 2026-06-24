@@ -1,0 +1,9 @@
+{include file=comm/head.html}
+<main class="contenttb list-page">
+  <h1>{sort:name}</h1>
+  {pboot:list num=10 order=date page=1}
+  <article class="news-item"><a href="[list:link]"><h2>[list:title]</h2><p>[list:description lencn=120]</p></a></article>
+  {/pboot:list}
+  {include file=comm/page.html}
+</main>
+{include file=comm/foot.html}
