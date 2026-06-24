@@ -122,12 +122,14 @@ img { max-width: 100%; height: auto; }
 .article-page h1 { text-align: center; }
 .meta { text-align: center; color: #888; margin-bottom: 24px; }
 @media (max-width: 900px) {
-  .head-main { min-height: 72px; gap: 12px; }
+  body { padding-top: 0; overflow-x: hidden; }
+  .site-head { overflow: visible; }
+  .head-main { min-height: 72px; height: 72px; gap: 12px; justify-content: space-between; overflow: hidden; position: relative; }
   .logo img { max-height: 46px; }
-  .head-slogan, .head-tel { display: none; }
-  .nav-toggle { display: block; margin-left: auto; }
-  .nav { display: none; }
-  .site-head.nav-open .nav { display: block; }
+  .head-slogan, .head-tel { display: none !important; visibility: hidden !important; width: 0 !important; height: 0 !important; overflow: hidden !important; }
+  .nav-toggle { display: block !important; position: absolute; right: 12px; top: 17px; margin-left: 0; z-index: 30; border-radius: 2px; }
+  .site-head .nav { display: none !important; position: absolute; left: 0; right: 0; top: 72px; }
+  .site-head.nav-open .nav { display: block !important; }
   .nav ul { display: block; }
   .nav li a { padding: 13px 18px; border-top: 1px solid rgba(255,255,255,.2); }
   .yz, .pro, .yy, .news, .abt { padding: 40px 0; }
