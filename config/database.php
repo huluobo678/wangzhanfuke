@@ -13,13 +13,13 @@ return array(
 
         'user' => 'pboot', // 数据库连接用户名
 
-        'passwd' => '123456', // 数据库连接密码
+        'passwd' => '', // 数据库连接密码
 
         'port' => '3306', // 数据库端口
 
-        //'dbname' => 'pbootcms' // 去掉注释，启用 mysql 数据库，注意修改前面的连接信息及 type 为 mysqli
+        //'dbname' => 'aotong' // 去掉注释，启用 mysql 数据库，注意修改前面的连接信息及 type 为 mysqli
 
-        'dbname' => '/data/pbootcms.db' // 去掉注释，启用 SQLite 数据库，注意修改 type 为 sqlite
+        'dbname' => '/data/aotong.db' // 去掉注释，启用 SQLite 数据库，注意修改 type 为 sqlite
     )
 
 );
